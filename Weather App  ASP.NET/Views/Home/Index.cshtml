@@ -13,15 +13,17 @@
 
     @foreach (City city in Model)
     {
-        <div class="box center">
+        <div class="box">
+            <div class="left-side">
+                <h3 class="city">@city.Name</h3>
+                <p class="time">@city.DateAndTime.ToString("hh:mm tt")</p>
+                <a class="details" href="/details">Details</a>
+            </div>
+            <div class="center-side">&nbsp;</div>
 
-            <h3>@city.Name</h3>
-            <p>@city.DateAndTime.ToString("hh:mm tt")</p>
-            
-            <a href="/details">Details</a>
-
-            <p>@city.Temperature°C</p>
-
+            <div class="right-side">
+                <p class="temp">@city.Temperature°C</p>
+            </div>
             </div>
     }
 </div>
