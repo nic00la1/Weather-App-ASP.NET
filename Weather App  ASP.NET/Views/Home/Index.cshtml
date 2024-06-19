@@ -10,10 +10,12 @@
 <body>
 <div class="page-content">
     <h1>Weather</h1>
+    
+    
 
     @foreach (City city in Model)
     {
-        <div class="box">
+        <div class="box" style="background-color: @city.Color">
             <div class="left-side">
                 <h3 class="city">@city.Name</h3>
                 <p class="time">@city.DateAndTime.ToString("hh:mm tt")</p>

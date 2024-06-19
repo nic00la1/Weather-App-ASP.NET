@@ -7,4 +7,5 @@ public class City
     public string? CityUniqueCode { get; set; }
     public DateTime DateAndTime { get; set; }
     public double Temperature { get; set; }
+    public string Color { get; set; }
 }

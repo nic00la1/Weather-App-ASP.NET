@@ -23,8 +23,9 @@
 
 .time {
     font-size: 0.9em;
-    color: gray;
-    margin: -15px 0px 4px 0px;
+    color: #3b3b3b;
+    margin: -15px 0px 7px 0px;
+    font-weight: bolder;
 }
 
 .temp {
@@ -45,7 +46,7 @@
 }
 
 .center-side {
-    border-left: 3px solid black;
+    border-left: 2px solid lightgray;
     height: 100%;
     float: left;
 }
