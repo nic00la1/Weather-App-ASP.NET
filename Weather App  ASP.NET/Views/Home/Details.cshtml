@@ -1,0 +1,29 @@
+﻿@model City
+<!Doctype html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8"/>
+    <link href="~/StyleSheet.css" rel="stylesheet"/>
+    </head>
+<body>
+<div>
+    <h1>City Details</h1>
+    <div class="box box-border">
+        <div class="left-side">
+            <h3 class="city">@Model.Name</h3>
+            <p class="time-light">@Model.DateAndTime.ToString("dd MMM yyyy hh:mm tt")</p>
+        </div>
+        <div class="center-side">&nbsp;</div>
+
+        <div class="right-side">
+            <p class="temp">@Model.Temperature°C</p>
+        </div>
+    </div>
+    
+    <div>
+        <a href="/" class="back-to">Back to Weather Home Page</a>
+    </div>
+</div>
+</body>
+</html>
