@@ -1,0 +1,30 @@
+﻿@model IEnumerable<City>
+
+<!Doctype html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8"/>
+    <link href="~/StyleSheet.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="page-content">
+    <h1>Weather</h1>
+
+    @foreach (City city in Model)
+    {
+        <div class="box center">
+
+            <h3>@city.Name</h3>
+            <p>@city.DateAndTime.ToString("hh:mm tt")</p>
+            
+            <a href="/details">Details</a>
+
+            <p>@city.Temperature°C</p>
+
+            </div>
+    }
+</div>
+
+</body>
+</html>
