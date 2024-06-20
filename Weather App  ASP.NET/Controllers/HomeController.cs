@@ -41,12 +41,13 @@ public class HomeController : Controller
         return View("Index", cities);
     }
 
-    [Route("/weather/{cityCode}")]
+    [Route("/weather/{cityCode?}")]
     public IActionResult Details(string? cityCode)
     {
         @ViewBag.Title = "Weather App - Details";
 
-        if (cityCode == null) return NotFound("City code can't be null");
+        if (string.IsNullOrEmpty(cityCode))
+            return NotFound("City code cannot be null or empty.");
 
         List<City> cities = new()
         {
@@ -78,6 +79,10 @@ public class HomeController : Controller
 
         City? matchingCodeCity =
             cities.FirstOrDefault(c => c.CityUniqueCode == cityCode);
+
+        if (matchingCodeCity == null)
+            return NotFound(
+                $"No weather details found for city code: {cityCode}.");
 
         return View(matchingCodeCity); // Views/Home/Details.cshtml
     }
