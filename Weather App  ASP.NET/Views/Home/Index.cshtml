@@ -11,11 +11,22 @@
 <div class="page-content">
     <h1>Weather</h1>
     
-    
+    @functions {
+        string GetTemperatureClass(double temperature)
+        {
+            if (temperature < 6.7)
+                return "temp-cold";
+            else if (temperature >= 6.7 && temperature <= 23.4)
+                return "temp-mild";
+            else // temperature > 23.4
+                return "temp-hot";
+        }
+
+    }
 
     @foreach (City city in Model)
     {
-        <div class="box" style="background-color: @city.Color">
+        <div class="box @GetTemperatureClass(city.Temperature)">
             <div class="left-side">
                 <h3 class="city">@city.Name</h3>
                 <p class="time">@city.DateAndTime.ToString("hh:mm tt")</p>

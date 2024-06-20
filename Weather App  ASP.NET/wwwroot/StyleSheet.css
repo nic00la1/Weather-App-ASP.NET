@@ -72,3 +72,15 @@
     text-decoration: none;
     font-size: 0.8em;
 }
+
+.temp-cold {
+    background-color: #6db7e6;
+}
+
+.temp-mild {
+    background-color: #e1ff8f;
+}
+
+.temp-hot {
+    background-color: #f9ca70;
+}

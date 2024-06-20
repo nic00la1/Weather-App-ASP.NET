@@ -10,9 +10,6 @@ public class HomeController : Controller
     {
         ViewBag.Title = "Weather App";
 
-        List<string>? colors = new()
-            { "#6db7e6", "#e1ff8f", "#f9ca70" }; // Example colors
-
         List<City> cities = new()
         {
             new City()
@@ -21,8 +18,7 @@ public class HomeController : Controller
                 Name = "London",
                 CityUniqueCode = "LND",
                 DateAndTime = DateTime.Parse("2030-01-01 8:00"),
-                Temperature = 28.7,
-                Color = colors[0]
+                Temperature = 0.5
             },
             new City()
             {
@@ -30,8 +26,7 @@ public class HomeController : Controller
                 Name = "New York",
                 CityUniqueCode = "NYC",
                 DateAndTime = DateTime.Parse("2030-01-01 3:00"),
-                Temperature = 33.5,
-                Color = colors[1]
+                Temperature = 15.6
             },
             new City()
             {
@@ -39,8 +34,7 @@ public class HomeController : Controller
                 Name = "Paris",
                 CityUniqueCode = "PAR",
                 DateAndTime = DateTime.Parse("2030-01-01 9:00"),
-                Temperature = 26.8,
-                Color = colors[2]
+                Temperature = 27.7
             }
         };
 
@@ -54,9 +48,6 @@ public class HomeController : Controller
 
         if (cityCode == null) return NotFound("City code can't be null");
 
-        List<string>? colors = new()
-            { "#6db7e6", "#e1ff8f", "#f9ca70" }; // Example colors
-
         List<City> cities = new()
         {
             new City()
@@ -65,8 +56,7 @@ public class HomeController : Controller
                 Name = "London",
                 CityUniqueCode = "LND",
                 DateAndTime = DateTime.Parse("2030-01-01 8:00"),
-                Temperature = 28.7,
-                Color = colors[0]
+                Temperature = 0.5
             },
             new City()
             {
@@ -74,8 +64,7 @@ public class HomeController : Controller
                 Name = "New York",
                 CityUniqueCode = "NYC",
                 DateAndTime = DateTime.Parse("2030-01-01 3:00"),
-                Temperature = 33.5,
-                Color = colors[1]
+                Temperature = 15.6
             },
             new City()
             {
@@ -83,8 +72,7 @@ public class HomeController : Controller
                 Name = "Paris",
                 CityUniqueCode = "PAR",
                 DateAndTime = DateTime.Parse("2030-01-01 9:00"),
-                Temperature = 26.8,
-                Color = colors[2]
+                Temperature = 27.7
             }
         };
 
